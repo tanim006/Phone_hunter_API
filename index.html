@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone_Hunter_Api</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header class=" flex flex-col items-center justify-center gap-y-5 mt-10">
+        <h1 class="text-6xl">Phone Hunting</h1>
+        <input id="search" type="text" placeholder="Type here" class="input input-bordered input-primary w-full max-w-xs" />
+        <button onclick="search()" id="button" class="btn bg-green-500">Search</button>
+
+    </header>
+    <main>
+        <!-- spinner -->
+        <div class="text-center mt-10 hidden" id="spinner">
+            <span class="loading loading-ring loading-lg"></span>
+        </div>
+        <div id="mainContainer" class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-y-5">
+            
+          </div>
+          <!-- show all button -->
+          <div class="text-center mt-10">
+          <button id="showButton" class="btn bg-sky-500 text-white hidden"> Show all</button>
+
+          </div>
+          <!-- Modal -->
+          <!-- Open the modal using ID.showModal() method -->
+<dialog id="mainModal" class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box">
+    <h3 id="PhoneName" class="text-lg font-bold">Hello!</h3>
+    <p class="py-4">Press ESC key or click the button below to close</p>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>
